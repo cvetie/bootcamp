@@ -1,0 +1,14 @@
+version: '2'
+services:
+  bookingservice:
+    build:
+      context: .
+      dockerfile: Dockerfile-Booking_Service
+    ports:
+     - "127.0.0.1:8082:8082"
+  traindataservice:
+    build:
+      context: .
+      dockerfile: Dockerfile-TrainData_Service
+    ports:
+     - "127.0.0.1:8081:8081"
